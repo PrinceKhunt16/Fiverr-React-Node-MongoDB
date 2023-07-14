@@ -1,0 +1,98 @@
+.message {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1200px;
+        margin: 50px;
+
+        .breadcrumbs {
+            font-weight: 300;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .messages {
+            margin: 10px 0px;
+            padding: 10px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow: scroll;
+
+            .item {
+                display: flex;
+                gap: 20px;
+                max-width: 600px;
+                font-size: 18px;
+
+                &.owner {
+                    flex-direction: row-reverse;
+                    align-self: flex-end;
+
+                    p {
+                        max-width: 500px;
+                        border-radius: 8px;
+                        background-color: #d9fdd2;
+                        box-shadow: 0 2px 0.5px rgba(11,20,26,0.3);
+                        color: #000;
+                    }
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                p {
+                    max-width: 500px;
+                    padding: 10px 8px 8px 8px;
+                    background-color: #f4f1f1;
+                    border-radius: 8px;
+                    color: #000;
+                    font-weight: 400;
+                    box-shadow: 0 2px 0.5px rgba(11,20,26,0.3);
+                    font-size: 16px;
+                }
+            }
+        }
+
+        hr {
+            height: 0;
+            border: 0.5px solid rgb(232, 230, 230);
+            margin-bottom: 20px;
+        }
+
+        .write {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+
+            input {
+                width: 100%;
+                height: 60px;
+                padding: 0px 10px;
+                border: 1px solid lightgray;
+                border-radius: 10px;
+                font-size: 16px;
+            }
+
+            button {
+                background-color: #0b141a21;
+                padding: 20px;
+                color: #000;
+                font-weight: 500;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                min-width: 100px;
+                height: 60px;
+                font-size: 16px;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}
