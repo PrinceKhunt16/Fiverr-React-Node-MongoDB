@@ -151,7 +151,7 @@ const Home = () => {
                 <div className="container">
                     <div className="item">
                         <h1>
-                            liverr <i>business</i>
+                            fiverr <i>business</i>
                         </h1>
                         <h1>
                             A business solution designed for <i>teams</i>
