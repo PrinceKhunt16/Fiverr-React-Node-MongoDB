@@ -99,7 +99,9 @@
         width: 1400px;
   
         h1{
-          color: #555;
+            color: #000;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
   
         .items {
@@ -126,7 +128,7 @@
   
             .line{
               width: 50px;
-              height: 2px;
+              height: 1px;
               background-color: lightgray;
               transition: all .3s ease;
             }
@@ -137,7 +139,7 @@
   
             &:hover{
               .line{
-                width: 80px;
+                width: 100px;
                 background-color: #1dbf73;
               }
             }
