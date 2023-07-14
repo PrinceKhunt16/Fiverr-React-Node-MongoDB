@@ -31,9 +31,6 @@
         font-size: 34px;
         font-weight: bold;
   
-        .text {
-        }
-  
         .dot {
           font-weight: bold;
           color: #1dbf73;
@@ -43,11 +40,11 @@
         display: flex;
         align-items: center;
         gap: 24px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
+        font-weight: 400;
   
         span {
           white-space: nowrap;
+          cursor: pointer;
         }
   
         .user {
@@ -110,7 +107,7 @@
       padding: 10px 0px;
       display: flex;
       justify-content: space-between;
-      color: gray;
+      color: #767676;
       font-weight: 300;
       font-family: "Montserrat", sans-serif;
     }
