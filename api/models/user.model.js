@@ -9,7 +9,7 @@ const userSchema = new Schema({
     country: { type: String, required: true },
     phone: { type: String, required: true },
     desc: { type: String, required: true },
-    is_seller: { type: String, required: true }
+    is_seller: { type: Boolean, required: true }
 }, {
     timestamps: true
 });
