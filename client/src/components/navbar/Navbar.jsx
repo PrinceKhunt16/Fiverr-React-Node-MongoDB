@@ -45,7 +45,6 @@ const Navbar = () => {
           <span>Fiverr Buisness</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Sign in</span>
           {!currentUser?.is_seller &&
             <span>Become a Seller</span>
           }
@@ -80,7 +79,7 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              <span>Sign in</span>
+              <Link className='link' to='/login'>Sign in</Link>
               <Link className="link" to="/register">
                 <button>Join</button>
               </Link>

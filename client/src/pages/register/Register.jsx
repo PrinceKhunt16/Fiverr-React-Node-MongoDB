@@ -42,7 +42,7 @@ function Register() {
                 img: url,
             });
 
-            // navigate("/")
+            navigate("/")
         } catch (err) {
             console.log(err);
         }

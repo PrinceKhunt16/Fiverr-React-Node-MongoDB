@@ -4,7 +4,7 @@ import "./CategoryCard.scss";
 
 const CategoryCard = ({ card }) => {
     return (
-        <Link to="/gigs?cat=design">
+        <Link to="/gigs?cat=Ai">
             <div className="catCard">
                 <div className='backgroundEffect'></div>
                 <img src={card.img} alt="" />

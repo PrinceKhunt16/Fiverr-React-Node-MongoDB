@@ -147,7 +147,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="features dark">
+            <div className="features">
                 <div className="container">
                     <div className="item">
                         <h1>

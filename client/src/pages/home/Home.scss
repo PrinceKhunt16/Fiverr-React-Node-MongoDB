@@ -1,32 +1,21 @@
 .home {
   .features {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 253, 247, 1) 10%, rgba(241, 253, 247, 1) 90%, rgba(255, 255, 255, 1) 100%);
+    background: #e3fff1;
     display: flex;
     justify-content: center;
     padding: 100px 0px;
-
-    &.dark {
-      background-color: #0d084d;
-
-      i {
-        font-weight: 300;
-      }
-
-      p {
-        margin-bottom: 20px;
-      }
-
-      button {
-        background-color: #1dbf73;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        width: max-content;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-      }
+    color: #000;
+    
+    button {
+      background-color: #1dbf73;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      width: max-content;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
     }
 
     .container {
@@ -34,6 +23,7 @@
       display: flex;
       align-items: center;
       gap: 50px;
+      color: #000000;
 
       .item {
         display: flex;
@@ -63,7 +53,6 @@
           gap: 10px;
           font-weight: 500;
           font-size: 18px;
-          color: #444444;
 
           img {
             width: 24px;
@@ -74,7 +63,6 @@
         p {
           font-size: 18px;
           font-weight: 300;
-          color: #2d2d2d;
           line-height: 28px;
           letter-spacing: 0.2px;
         }
