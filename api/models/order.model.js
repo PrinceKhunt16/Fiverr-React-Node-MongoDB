@@ -9,7 +9,7 @@ const OrderSchema = new Schema({
     seller_id: { type: String, required: true },
     buyer_id: { type: String, required: true },
     is_completed: { type: Boolean, default: false },
-    payment_intent: { type: String, required: true },
+    payment_intent: { type: String },
 }, {
     timestamps: true
 });

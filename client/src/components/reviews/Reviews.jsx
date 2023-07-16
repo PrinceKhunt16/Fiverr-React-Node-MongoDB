@@ -30,8 +30,6 @@ const Reviews = ({ gig_id }) => {
         mutation.mutate({ gig_id, desc, star });
     }
 
-    console.log(data);
-
     return (
         <div className="reviews">
             <h2>Reviews</h2>
