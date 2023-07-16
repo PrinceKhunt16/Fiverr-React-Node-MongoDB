@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import newRequest from '../../utils/newRequest';
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
-  const currentUser = {
-    id: 1,
-    username: "John Doe",
-    isSeller: true
-  };
+  const navigate = useNavigate();
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -23,6 +21,16 @@ const Navbar = () => {
       window.removeEventListener("scroll", isActive);
     }
   }, []);
+
+  const handleLogout = async () => {
+    try {
+      await newRequest.post("/auth/logout");
+      localStorage.setItem("currentUser", null);
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div className={active || pathname !== '/' ? 'navbar active' : "navbar"}>
@@ -38,21 +46,18 @@ const Navbar = () => {
           <span>Explore</span>
           <span>English</span>
           <span>Sign in</span>
-          {!currentUser.isSeller &&
+          {!currentUser?.is_seller &&
             <span>Become a Seller</span>
-          }
-          {!currentUser &&
-            <button>Join in</button>
           }
           {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
               <img
-                src="https://learnyzen.com/wp-content/uploads/2017/08/test1-481x385.png"
+                src={currentUser?.img || "https://learnyzen.com/wp-content/uploads/2017/08/test1-481x385.png"}
                 alt=""
               />
               <span>{currentUser?.username}</span>
               {open && <div className="options">
-                {currentUser.isSeller && (
+                {currentUser.is_seller && (
                   <>
                     <Link className="link" to="/mygigs">
                       Gigs
@@ -68,7 +73,7 @@ const Navbar = () => {
                 <Link className="link" to="/messages">
                   Messages
                 </Link>
-                <Link className="link" to="/">
+                <Link className="link" onClick={() => handleLogout()}>
                   Logout
                 </Link>
               </div>}
